@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Любимый проект</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <article>
+            <div class="panel-otput-data" id="panel-data">
+                <button id="change-data" onclick="change()">Изменить данные</button>
+                <div class="otput-data" id="BMI"></div>
+                <div class="otput-data" id="BFP"></div>
+                <div class="otput-data" id="LBM"></div>
+                <div class="otput-data" id="BSA"></div>
+                <div class="otput-data" id="FFMI"></div>
+                <div class="otput-data" id="BAI"></div>
+                <div class="otput-data" id="BMR"></div>
+                <div class="otput-data" id="IBW"></div>
+            </div>
+            <div class="modal_window" id="data-modal">
+                <div class="modal_box">
+                   <h1 class="data header">Введите свои данные</h1>
+                   <div class="data indicator"><h2>Вес</h2><input type="number" size="1" min="20" max="300" id="weight" placeholder="00"  value="79" onclick="input_after_error()"><h6>кг</h6></div>
+                   <div class="data indicator"><h2>Рост</h2><input type="number" min="100" max="250"id="height" placeholder="000" value="181" onclick="input_after_error()"><h6>см</h6></div>
+                   <div class="data indicator"><h2>Возраст</h2><input type="number" min="10" max="120" id="age" placeholder="00" value="22" onclick="input_after_error()"><h6>лет</h6></div>
+                   <div class="data indicator">
+                        <h2>Пол</h2>
+                        <select id="gender" onclick="input_after_error()">
+                            <option >-------</option>
+                            <option selected value="1">Мужской</option>
+                            <option value="0">Женский</option>
+                        </select>
+                   </div>
+                   <div class="data indicator"><h2>Обхват бедер</h2><input type="number" min="20" max="300" id="hip" placeholder="00" value="100" onclick="input_after_error()"><h6>см</h6></div>
+                   <div class="data indicator"><h2>Талия</h2><input type="number" min="20" max="300" id="waist" placeholder="00" value="83" onclick="input_after_error()"><h6>см</h6></div>
+                   <div class="data indicator"><h2>Шея</h2><input type="number" min="20" max="300" id="neck" placeholder="00" value="35" onclick="input_after_error()"><h6>см</h6></div>
+                   <button class="send" id="send-btn" onclick="send()">Отправить</button>
+                </div>
+            </div>
+        </article>
+    </main>
+
+    <script src="tracker.js"></script>
+</body>
+</html>
