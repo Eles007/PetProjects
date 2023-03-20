@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+    <title>Любимый проект</title>
+</head>
+<body>
+    <article>
+        <div id="panel-output">
+            <div id="input-img-btn">
+                <input type="text" id="input-QRCode" autofocus placeholder="Введите url или сообщение" onchange="send()">
+                <div>
+                    <div id="cross-btn" onclick="clearAll()"></div>
+                </div>
+            </div>
+            <div id="qrcode-img"></div>
+            <div id="input-range-panel">
+                <input id="input-range" type="range" min="200" max="500" step="50" value="200" onchange="input_range()">
+                <output id="input-range-output">200px</output>
+            </div>
+            <button id="generation-btn" onclick="send()">Сгенерировать</button>
+        </div>
+    </article>
+
+    <script src="qrcode.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>

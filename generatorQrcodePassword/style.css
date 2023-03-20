@@ -1,0 +1,165 @@
+body {
+    font-family: monospace;
+}
+
+article {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(192, 201, 208);
+}
+
+/*Панель*/
+#panel-output {
+    display: flex;
+    justify-content: center;
+    margin: 50px 0 50px 0;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    align-items: center;
+    min-width: 200px;
+    min-height: 250px;
+    border: 2px solid gray;
+    background-color: rgb(248, 249, 249);
+    border-radius: 15px;
+    box-shadow: 5px 5px 30px -10px rgba(255, 255, 255, 0.6);
+}
+
+/*инпут панель*/
+#input-img-btn {
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    align-items: center;
+}
+
+/*инпут*/
+#input-QRCode {
+    width: 300px;
+    margin: 15px 0 15px 15px;
+    padding: 5px 25px 5px 5px;
+    border-radius: 10px;
+
+    border: 1px solid black;
+}
+
+/*Кнопки*/
+#generation-btn {
+    height: 30px;
+    width: 200px;
+    margin: 20px 20px 20px 20px;
+
+    border-radius: 10px;
+    border: 2px solid gray;
+    font-size: 17px;
+    font-weight: 550;
+    background-color: rgb(162, 178, 251);
+}
+
+/*qrcode*/
+
+#qrcode-img {
+    margin: 20px 40px 20px 40px;
+    transform: scale(0);
+    opacity: 0;
+    transition: transform .6s,opacity .6s;
+}
+
+/*крестик*/
+#input-img-btn div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 25px;
+    height: 25px;
+}
+
+#cross-btn {
+    margin: 0 0 0 -55px;
+    position: absolute;
+    opacity: 0.1;
+    transform: scale(0.5);
+    transition: opacity ease 0.5s;
+    cursor: pointer;
+}
+
+#cross-btn:hover {
+    transform: scale(0.8);
+    opacity: 0.5;
+    transition: transform .2s, opacity .2s;
+}
+
+#cross-btn::before,
+#cross-btn::after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 25px;
+    height: 3px;
+    background: #9c3333;
+}
+
+#cross-btn::before {
+    transform: rotate(45deg);
+}
+
+#cross-btn::after {
+    transform: rotate(-45deg);
+}
+
+
+/*Панель бегунок*/
+#input-range-panel {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    font-size: 25px;
+    height: 25px;
+}
+
+/*бегунок*/
+input[type=range] {
+    width: 150px;
+    -webkit-appearance: none;
+    border-radius: 30px;
+    height: 10px;
+}
+
+input[type=range]::-webkit-slider-thumb {
+    box-shadow: 2px 2px 1px #353535;
+    height: 15px;
+    width: 15px;
+    border-radius: 15px;
+    background: #a2b2fb;
+    cursor: pointer;
+    -webkit-appearance: none;
+}
+
+input[type=range]::-moz-range-thumb {
+    height: 15px;
+    width: 15px;
+    border-radius: 15px;
+    background: #a2b2fb;
+    cursor: pointer;
+}
+input[type=range]::-ms-thumb {
+    margin-top: 1px;
+    box-shadow: 2px 2px 1px #353535;;
+    height: 15px;
+    width: 15px;
+    border-radius: 15px;
+    background: #a2b2fb;
+    cursor: pointer;
+}
+
+/*вывод ползунка*/
+#input-range-output{
+    padding: 0 5px 0 10px;
+    opacity: 0.6;
+}
