@@ -1,13 +1,101 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    font: 14px "Century Gothic", Futura, sans-serif;
+    margin: 20px;
+}
+#root{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+}
+ol,
+ul {
+    padding-left: 30px;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.board-row:after {
+    clear: both;
+    content: "";
+    display: table;
+}
+
+.status {
+    margin-bottom: 10px;
+}
+
+.square {
+    background: #f1f1f1;
+    border: 2px solid #000;
+    float: left;
+    font-size: 90px;
+    font-weight: bold;
+    line-height: 34px;
+    height: 150px;
+    margin-right: -1px;
+    margin-top: -1px;
+    padding: 0;
+    text-align: center;
+    width: 150px;
+}
+.square.activ{
+    border: 5px solid rgb(255, 0, 0);
+}
+
+.square.winner{
+    border: 7px solid rgb(28, 237, 5);
+}
+
+.square:focus {
+    outline: none;
+}
+
+.kbd-navigation .square:focus {
+    background: #ddd;
+}
+
+.game {
+    display: flex;
+    flex-direction: row;
+    background: #518593;
+    border-radius: 40px;
+    align-items: center;
+    box-shadow: 0px 3px 17px 0px rgba(0, 0, 0, 0.6);
+}
+
+.game-info {
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 50px 50px 50px 50px;
+}
+
+.game-info div{
+    width: 310px;
+    text-align: center;
+    color: white;
+    font-size: 35px;
+}
+
+.game-info button{
+    font-size: 20px;
+    margin: 10px 5px 0px 5px;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 5px 10px 5px 10px;
+}
+
+.game-board{
+    border: 3px solid black;
+    border-radius: 30px;
+    overflow: hidden;
+    margin: 50px 0 50px 50px;
+    height: 447px;
+}
+
+li::marker{
+    font-size: 22px;
 }
